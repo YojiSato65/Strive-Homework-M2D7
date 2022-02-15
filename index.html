@@ -32,8 +32,8 @@
         }
 
         /* EX4) Write a selector to target the first blogpost */
-        main div div div:first-of-type h2:first-of-type {
-            color: yellow;
+        main div div div:first-of-type {
+            color: orange;
         }
 
         /* EX5) Write a selector to target the "even" links in the navbar */
@@ -42,11 +42,29 @@
         }
 
         /* EX6) Write a selector to target the last blog post */
+        main div div div:nth-of-type(3) {
+            color: red;
+        }
+
         /* EX7) Write a selector to target all the li into the first ordered-list in the sidebar ( Archives ) */
+        main div aside div:nth-of-type(2) li a {
+            color: violet;
+        }
+
         /* EX8) Write a selector to target the second post author */
+        body main div div div:nth-of-type(2) p a {
+            color: wheat;
+        }
+
         /* EX9) Write a selector to target the "back to top" link     #### EXTRA Try doing it without targeting the footer element directly */
+        body footer p:last-of-type {
+            color: yellowgreen;
+        }
+
         /* EX10) Write a selector to target the footer */
-        */
+        body footer {
+            background-color: red;
+        }
     </style>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
