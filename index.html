@@ -440,7 +440,15 @@
             navbar.appendChild(newLink)
         }
         createNewLink()
+
         //   EX12) Write a function to change the color of the main title
+        const changeMainTitleColor = function ()
+        {
+            let mainTitle = document.getElementsByClassName('display-4')
+            mainTitle[0].style.color = 'red'
+        }
+        changeMainTitleColor()
+
         //   EX13) Write a function to change the background of the jumbotron
         //   EX14) Write a function to remove all the links under "Elsewhere"
         //   EX15) Write a function to change the column size for heading in jumbotron
