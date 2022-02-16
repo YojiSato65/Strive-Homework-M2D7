@@ -70,8 +70,8 @@
             background-color: blue;
         }
 
-        body>div>div:nth-of-type(2) {
-            background-color: aqua !important;
+        body div:last-of-type a svg {
+            background-color: blue;
         }
     </style>
     <meta charset="utf-8" />
@@ -491,6 +491,13 @@
         // changeColumnSize()
 
         //   EX16) Write a function to remove the "Search" magnifying glass icon
+        const removeSearchIcon = function ()
+        {
+            let icon = document.querySelector('body div:last-of-type a svg')
+            icon.remove()
+        }
+        // removeSearchIcon()
+        
         //   EX17) Write a function to trim just the first 50 characters in the first paragraph for each blog post
         //   EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title)
         //   EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
