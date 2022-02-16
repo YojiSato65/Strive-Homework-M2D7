@@ -28,7 +28,7 @@
 
         /* EX3) Write a selector to target the "continue reading..." inside the jumbotron */
         body div div div p a {
-            color: green;
+            color: green !important;
         }
 
         /* EX4) Write a selector to target the first blogpost */
@@ -52,18 +52,22 @@
         }
 
         /* EX8) Write a selector to target the second post author */
-        body main div div div:nth-of-type(2) p a {
-            color: wheat;
+        body main div div div:nth-of-type(2) p:first-of-type a:first-of-type {
+            background-color: wheat;
         }
 
         /* EX9) Write a selector to target the "back to top" link     #### EXTRA Try doing it without targeting the footer element directly */
-        body footer p:last-of-type {
+        body p:last-of-type a {
             color: yellowgreen;
         }
 
         /* EX10) Write a selector to target the footer */
         body footer {
             background-color: red;
+        }
+
+        aside div:last-of-type ol li {
+            background-color: blue;
         }
     </style>
     <meta charset="utf-8" />
@@ -444,7 +448,7 @@
             newLink.href = '#'
             navbar.appendChild(newLink)
         }
-        createNewLink()
+        // createNewLink()
 
         //   EX12) Write a function to change the color of the main title
         const changeMainTitleColor = function ()
@@ -452,7 +456,7 @@
             let mainTitle = document.getElementsByClassName('display-4')
             mainTitle[0].style.color = 'red'
         }
-        changeMainTitleColor()
+        // changeMainTitleColor()
 
         //   EX13) Write a function to change the background of the jumbotron
         const changeBackgoundColor = function ()
@@ -460,9 +464,20 @@
             let backgroundColor = document.querySelector('.jumbotron')
             backgroundColor.classList.add('new-bg-ex-13')
         }
-        changeBackgoundColor()
+        // changeBackgoundColor()
 
         //   EX14) Write a function to remove all the links under "Elsewhere"
+        const removeAllLinks = function ()
+        {
+            let links = document.querySelectorAll('aside div:last-of-type ol li')
+            for (let i = 0; i < links.length; i++)
+            {
+                let link = links[i]
+                link.remove()
+            }
+        }
+        removeAllLinks()
+
         //   EX15) Write a function to change the column size for heading in jumbotron
         //   EX16) Write a function to remove the "Search" magnifying glass icon
         //   EX17) Write a function to trim just the first 50 characters in the first paragraph for each blog post
