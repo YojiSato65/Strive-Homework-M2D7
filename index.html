@@ -69,6 +69,10 @@
         aside div:last-of-type ol li {
             background-color: blue;
         }
+
+        body>div>div:nth-of-type(2) {
+            background-color: aqua !important;
+        }
     </style>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -476,9 +480,16 @@
                 link.remove()
             }
         }
-        removeAllLinks()
+        // removeAllLinks()
 
         //   EX15) Write a function to change the column size for heading in jumbotron
+        const changeColumnSize = function ()
+        {
+            let column = document.querySelector('body>div>div:nth-of-type(2)')
+            column.style.height = '80vh'
+        }
+        // changeColumnSize()
+
         //   EX16) Write a function to remove the "Search" magnifying glass icon
         //   EX17) Write a function to trim just the first 50 characters in the first paragraph for each blog post
         //   EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title)
